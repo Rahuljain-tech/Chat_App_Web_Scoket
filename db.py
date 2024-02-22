@@ -2,8 +2,7 @@ from pymongo import MongoClient
 from datetime import datetime
 from werkzeug.security import generate_password_hash 
 from user import User
-client = MongoClient("mongodb+srv://root:Rahul12345@rj.uujki0d.mongodb.net/?retryWrites=true&w=majority")
-
+client = MONGO_URL
 chat_db = client.get_database("ChatDB")
 users_collection = chat_db.get_collection("users")
 rooms_collection = chat_db.get_collection("rooms")
